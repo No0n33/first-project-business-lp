@@ -7,79 +7,57 @@
   font-family: "Lalezar", cursive;
 }
 
-.reveal {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: all 2s ease;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 body {
   margin: 0 10rem;
 }
-
-.parallax {
-  background: url("../img/main_kv.jpg") fixed center/100%;
-  //navbar
-  .main-nav {
-    text-transform: uppercase;
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.66);
-    z-index: 100;
-    ul {
-      display: flex;
-      list-style: none;
-      color: white;
-      //umieszcza menu po lewej str
-      justify-content: flex-end;
-      li {
-        // margin: 0 20px;
-        // float: right;
-        padding: 1rem 1.5rem;
-        //stylowanie każdego elementu z listy
-        a {
-          text-decoration: none;
-          color: #fff;
-          // border-bottom: 3px white solid;
-          padding-right: 1rem;
-          transition: border-color 0.5s;
-        }
-        a:hover {
-          border-bottom: #027aca 2px solid;
-        }
+.main-nav {
+  text-transform: uppercase;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.66);
+  z-index: 100;
+  ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    //umieszcza menu po lewej str
+    justify-content: flex-end;
+    li {
+      // margin: 0 20px;
+      // float: right;
+      padding: 1rem 1.5rem;
+      //stylowanie każdego elementu z listy
+      a {
+        text-decoration: none;
+        color: #fff;
+        // border-bottom: 3px white solid;
+        padding-right: 1rem;
+        transition: border-color 0.5s;
+      }
+      a:hover {
+        border-bottom: #027aca 2px solid;
       }
     }
   }
-  .parallax-inner {
-    color: white;
-    padding-top: 15%;
-    text-align: center;
+}
 
-    .header-content {
-      text-align: center;
-      padding-bottom: 7%;
-      h1 {
-        text-transform: uppercase;
-        font-size: 6rem;
-      }
-      h3 {
-        font-size: 3rem;
-        padding-top: 1rem;
-      }
-      p {
-        padding-top: 5rem;
-        font-size: 2.4rem;
-      }
-    }
+.header-content {
+  text-align: center;
+  padding-bottom: 7%;
+  h1 {
+    text-transform: uppercase;
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 3rem;
+    padding-top: 1rem;
+  }
+  p {
+    padding-top: 5rem;
+    font-size: 2.4rem;
   }
 }
 //zakres działania
@@ -96,7 +74,7 @@ body {
     display: flex;
     .card-wrapper {
       cursor: pointer;
-      margin: 0 20px;
+      margin: 0 3rem;
       .card {
         width: 230px;
         height: 325px;
@@ -168,8 +146,6 @@ body {
 
 //about
 #about {
-  // background-image: url("../img/about.jpg");
-  // background-repeat: no-repeat;
   text-align: center;
   padding: 5rem 0;
   background-color: rgb(182, 182, 182);
@@ -222,19 +198,6 @@ body {
     }
   }
 }
-
-//bottom
-.bottom .parallax-inner-bottom {
-  //dodaje przezroczyste niebieskie tło pod formularz
-  background-color: rgba(7, 109, 192, 0.5);
-  text-align: center;
-  color: white;
-  padding: 2.5rem;
-  h2 {
-    font-size: 40px;
-  }
-}
-
 /* Formularz kontaktowy */
 .callback-form {
   width: 100%;
@@ -262,6 +225,12 @@ body {
   height: 80px;
   border: #f5f5f5 1px solid;
 }
+.callback-form button {
+  width: 200px;
+  padding: 4px;
+  height: 40px;
+  border: #f5f5f5 1px solid;
+}
 
 /* ramka zaznaczonego pola w formularzu ma inny kolor */
 .callback-form input:focus {
@@ -281,16 +250,16 @@ body {
   padding: 10px 10px 10px 10px;
   border: solid #0590e6 2px;
   text-decoration: none;
-  width: 40px;
+  width: 10px;
 }
 
 .btn:hover {
   background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  // background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  // background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  // background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  // background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  // background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
 
