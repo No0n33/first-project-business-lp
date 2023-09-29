@@ -1,29 +1,70 @@
-//Pierwsza linia kodu dodaje nasłuchiwanie zdarzenia "scroll" na oknie przeglądarki.
-//W momencie, gdy użytkownik przewija stronę, funkcja "reveal" zostanie uruchomiona.
 window.addEventListener("scroll", reveal);
-
-//Funkcja "reveal" tworzy listę wszystkich elementów na stronie, które posiadają klasę "reveal".
 function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  //Następnie funkcja przechodzi przez każdy z tych elementów w pętli "for".
-  for (var i = 0; i < reveals.length; i++) {
-    //Dla każdego elementu zostaje pobrana wartość "top", czyli odległość od góry okna przeglądarki.
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    //Następnie obliczane jest położenie, w którym element ma się pojawić.
-    //Domyślnie element zostanie odkryty, gdy jego górna krawędź jest oddalona od
-    //dolnej krawędzi okna przeglądarki o 10 pikseli.
-    var revealpoint = 2;
-    //Jeśli odległość między górną krawędzią elementu a dolną krawędzią okna
-    //przeglądarki jest mniejsza niż ustalony punkt pojawienia się (10 pikseli),
-    //do elementu zostaje dodana klasa "active", która odpowiada za wyświetlanie elementu.
+  let reveals = document.querySelectorAll(".reveal");
+  for (let i = 0; i < reveals.length; i++) {
+    let windowheight = window.innerHeight;
+    let revealtop = reveals[i].getBoundingClientRect().top;
+    let revealpoint = 2;
     if (revealtop < windowheight - revealpoint) {
       reveals[i].classList.add("active");
-    }
-    //Jeśli element nie spełnia warunku, klasa "active" zostaje usunięta, co oznacza,
-    //że element jest niewidoczny.
-    else {
+    } else {
       reveals[i].classList.remove("active");
     }
   }
+}
+class TypeWriter {
+  constructor(txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = "";
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.isDeleting = false;
+  }
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+    // Check if deleting
+    if (this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+    // Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+    // Initial Type Speed
+    let typeSpeed = 300;
+    if (this.isDeleting) {
+      typeSpeed /= 2;
+    }
+    // If word is complete
+    if (!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 500;
+    }
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+// Init On DOM Load
+document.addEventListener("DOMContentLoaded", init);
+// Init App
+function init() {
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
 }

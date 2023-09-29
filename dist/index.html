@@ -10,13 +10,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
 
     <title>Security Systems| John B.</title>
@@ -31,15 +27,54 @@
       </ul>
     </div>
     <div class="header-content">
-      <h1>Security Systems</h1>
-      <h3>John B.</h3>
-      <div class="bottom-line"></div>
-      <p>"Under control"</p>
+      <div class="left-kv">
+        <h1>
+          Security
+          <span
+            class="txt-type"
+            data-wait="3000"
+            data-words='["Systems", "Cameras", "Sensors", "Alarms"]'
+          ></span>
+        </h1>
+        <h3>John B.</h3>
+        <p>"Creating a Safer Space, Together"</p>
+      </div>
+      <div class="right-kv">
+        <img
+          src="../dist/img/kv.png"
+          alt="image presenting cctv camera with 360 rotation"
+        />
+      </div>
     </div>
-
+    <div class="bottom-line"></div>
+    <div id="about" class="reveal">
+      <div class="grid">
+        <div class="graphic-container">
+          <img src="../dist/img/experience.png" alt="" class="image" />
+        </div>
+        <div class="text-container">
+          <h2>Experience</h2>
+          <p>
+            With 25 years in surveillance, I excel in configuring, maintaining,
+            and troubleshooting video monitoring systems. My expertise extends
+            to diverse intercom systems, integrating them with access control
+            for complete security solutions. I've designed and implemented
+            tailored security setups for various settings, ensuring optimal
+            performance.
+          </p>
+          <br />
+          <br />
+          <p>
+            Proficient in rapid responses and staying updated with evolving
+            technologies, I am eager to apply my knowledge in monitoring,
+            security systems, and electrical work to new challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-line"></div>
     <div id="cases" class="container reveal">
       <h2>Scope of work</h2>
-      <div class="bottom-line"></div>
       <div class="card-container">
         <div class="card-wrapper">
           <div class="card light">
@@ -88,36 +123,79 @@
         </div>
       </div>
     </div>
+    <div class="bottom-line"></div>
     <div id="about" class="reveal">
       <div class="grid">
         <div class="text-container">
-          <h2>Experience</h2>
-          <div class="bottom-line"></div>
+          <h2>SmartHome</h2>
           <p>
-            With 25 years in surveillance, I excel in configuring, maintaining,
-            and troubleshooting video monitoring systems. My expertise extends
-            to diverse intercom systems, integrating them with access control
-            for complete security solutions. I've designed and implemented
-            tailored security setups for various settings, ensuring optimal
-            performance.
+            Smart home refers to an interconnected system of devices and
+            appliances within a household that can communicate, interact, and be
+            controlled remotely. In this modern setup:
           </p>
           <br />
+          <ul>
+            <li>
+              <b>CCTV Cameras:</b> Surveillance is enhanced through CCTV cameras
+              that offer real-time monitoring and recording, providing a sense
+              of security and peace of mind.
+            </li>
+            <li>
+              <b>Weather Sensors:</b> Integrated weather sensors provide
+              valuable data for automated adjustments, like adjusting
+              thermostats based on weather forecasts, optimizing energy usage.
+            </li>
+            <li>
+              <b>Smarthome Control Installation:</b> The core of a smart home is
+              an integrated control system, allowing homeowners to manage
+              various aspects of their home remotely, from temperature to
+              security.
+            </li>
+            <li>
+              <b>WiFi Connectivity:</b> Central to this network is WiFi,
+              enabling seamless communication and control between different
+              devices and the homeowner through their smartphone or other
+              devices.
+            </li>
+            <li>
+              <b>Access Control:</b> Smart homes employ sophisticated access
+              control mechanisms, ensuring only authorized individuals can
+              access the premises, enhancing safety and privacy.
+            </li>
+            <li>
+              <b>Alarm Systems:</b> Smart alarms are connected to the network,
+              sending alerts to homeowners' devices if unusual activities or
+              breaches are detected, bolstering security measures.
+            </li>
+            <li>
+              <b>Lighting Control:</b> Automated lighting control allows for
+              personalized lighting schemes, optimizing energy use and creating
+              ambiance based on preferences or time of day.
+            </li>
+          </ul>
           <br />
           <p>
-            Proficient in rapid responses and staying updated with evolving
-            technologies, I am eager to apply my knowledge in monitoring,
-            security systems, and electrical work to new challenges.
+            These elements come together to create a modern, efficient, and
+            secure living space, offering convenience and peace of mind to the
+            homeowners while contributing to a more sustainable and
+            interconnected lifestyle.
           </p>
         </div>
         <div class="graphic-container">
-          <img src="../dist/img/about.jpg" alt="" class="image" />
+          <img
+            src="../dist/img/SmartHome.png"
+            alt=" Smart home refers to an interconnected system of devices and
+          appliances within a household that can communicate, interact, and be
+          controlled remotely."
+            class="image"
+          />
         </div>
       </div>
     </div>
+    <div class="bottom-line"></div>
     <!-- Testimonials section to show, there will be company's google profile with testimonials from google -->
     <div class="testimonials reveal">
       <h2>Testimonials</h2>
-      <div class="bottom-line"></div>
       <div class="testimonial">
         <img src="avatar1.jpg" alt="User 1" />
         <p>
@@ -136,10 +214,9 @@
       </div>
       <!-- More testimonials can be added here -->
     </div>
+    <div class="bottom-line"></div>
     <div id="contact" class="contact flex-columns reveal">
-      <div class="row">
-        <div class="column">
-          <div class="column-2 bg-light">
+          <div class="column">
             <h2>Contact form</h2>
             <form action="" class="callback-form">
               <div class="form-control">
@@ -183,9 +260,11 @@
               </button>
             </form>
           </div>
-        </div>
       </div>
     </div>
+<div class="footer">
+  <h4>sdsad</h4>
+</div>
     <script src="index.js"></script>
   </body>
 </html>
