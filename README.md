@@ -12,6 +12,9 @@ This landing page was created as a part of a commercial project for a client spe
 - **CSS3:** Style sheet language used for presenting the project's design and layout.
 - **Sass:** Preprocessor scripting language that is interpreted or compiled into CSS.
 
+<div><img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;</div> 
+<div><img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;</div> 
+
 ## Project Highlights
 
 - **Client-Centric Design:** The landing page is crafted with the client's business objectives and target audience in mind.
